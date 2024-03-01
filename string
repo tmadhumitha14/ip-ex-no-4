@@ -1,0 +1,14 @@
+function newString(inputString) {
+    if (inputString.length < 3) {
+        return inputString; 
+    }
+    const firstThree = inputString.substring(0, 3); 
+    const lastThree = inputString.substring(inputString.length - 3); 
+    return firstThree + lastThree;
+}
+
+
+const inputStr = "Madhumitha";
+console.log("New string:", newString(inputStr)); // Output: "Helrld"
+
+
