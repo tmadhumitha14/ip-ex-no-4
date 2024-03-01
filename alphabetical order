@@ -1,0 +1,13 @@
+# ip-ex-no-4
+const employees = [
+    { name: "John", age: 30 },
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 35 }
+];
+
+
+employees.sort((a, b) => a.name.localeCompare(b.name));
+
+
+console.log("Employees sorted by name:");
+console.log(employees);
