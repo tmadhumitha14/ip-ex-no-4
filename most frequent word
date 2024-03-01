@@ -1,0 +1,25 @@
+function mostFrequentWord(inputString) {
+    const words = inputString.split(/\s+/); 
+    const wordCounts = {};
+
+    
+    words.forEach(word => {
+        wordCounts[word] = (wordCounts[word] || 0) + 1;
+    });
+
+    
+    let mostFrequent = "";
+    let maxCount = 0;
+    for (const word in wordCounts) {
+        if (wordCounts[word] > maxCount) {
+            mostFrequent = word;
+            maxCount = wordCounts[word];
+        }
+    }
+
+    return mostFrequent;
+}
+
+const inputString = "the quick brown fox jumps over the lazy dog";
+
+console.log("Most frequent word:", mostFrequentWord(inputString));
